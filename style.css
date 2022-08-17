@@ -6,3 +6,6 @@ ul {
     display: inline-block;
     margin-right: .50rem;
 }
+h1 {
+    text-align: center;
+}
