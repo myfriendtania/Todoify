@@ -13,7 +13,13 @@ $(this).toggleClass('text');
 $(this).html(`<input type="text" value="${todoText}"/>`)
 });
 
-
+$('ul').on('keydown', 'input', function(event) {
+    if (event.keyCode !==13) return;
+    const todoItem = $(this).closest('span');
+    const todoText = $(this).val();
+    todoItem.html(todoText);
+    todoItem.toggleClass('text');
+});
 
 $('form').on('submit', function (event) {
     event.preventDefault();
